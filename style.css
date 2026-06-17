@@ -1,0 +1,224 @@
+.container-principal {/*CONTAINER QUE ENGLOBA TODOS ELEMENTOS DO SITE, PRECISAMOS DEFINIFIR O MAX DE LARGURA, MARGIN EXTERNA E INTERNA, PARA UM SITE ESPANSIVO PARA TD TIPO DE TELA*/
+  max-width: 1600px; /* tamanho máximo que o container pode ter */
+  width: 100%; /* ocupa 100% da tela em telas menores */
+  margin: 0 auto; /* 0 cima/baixo, auto centraliza na tela */
+  padding: 0 30px; /* 0 cima/baixo, 30px de proteção nas laterais */
+}
+
+.titulo-savage {
+  font-family: "Megrim", system-ui; /* fonte principal, system-ui é o plano B */
+  font-weight: 600; /* espessura da letra — 600 é semi-negrito */
+  font-style: normal; /* estilo normal, sem itálico */
+  font-size: clamp(2rem, 5vw, 6rem); /* mínimo 2rem, cresce com a tela, máximo 6rem */
+  text-align: center; /* centraliza o texto horizontalmente */
+  margin-top: 40px; /* 40px de espaço acima do título */
+}
+
+body {
+  background-color: whitesmoke; /* cor de fundo da página inteira */
+}
+
+.foto-banner {
+  display: block; /* transforma img de inline para bloco, aceita width/height */
+  width: 100%; /* ocupa toda a largura do container pai */
+  height: 100%; /* ocupa toda a altura do container pai */
+  object-fit: cover; /* preenche o espaço cortando o que sobrar */
+  object-position: center 30%; /* foca na parte de cima da imagem */
+}
+
+.imagem-banner {
+  width: 93%; /* largura — não ocupa 100% para dar respiro nas laterais */
+  height: 700px; /* altura fixa do banner */
+  overflow: hidden; /* esconde o que a imagem tiver além da área */
+  margin: 0 auto; /* centraliza o banner na página */
+  position: relative; /* permite posicionar elementos filhos por cima */
+  border-radius: 9px; /* arredonda os cantos do banner */
+}
+/* nav organiza os dois menus lado a lado */
+.nav-banner {
+  position: absolute; /*elemento flutua por cima de oputros*/
+  top: 20px;/*distancia topo*/
+  left: 50px;/*distancia esquerda*/
+  right: 60px;/*distamcia direita*/
+  display: flex; /* coloca os dois menus lado a lado */
+  justify-content: space-between;/* um em cada lado */
+  align-items: center/*alinha verticalmente */
+
+}
+
+.ul-menu {
+  font-family: "M PLUS U", sans-serif; /* fonte da lista */
+  display: flex; /* coloca os itens da lista lado a lado */
+  gap: 30px; /* espaço de 30px entre cada item */
+  list-style-type: none; /* remove o ponto padrão do ul */
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.ul-menu2 {
+  font-family: "M PLUS U", sans-serif; /* fonte da lista */
+  display: flex; /* itens lado a lado */
+  gap: 30px; /* espaço entre os itens */
+  color: white; /* cor branca */
+  list-style-type: none; /* remove ponto padrão do ul */
+  cursor: pointer;
+}
+
+.texto-banner-outonoinverno {
+  font-family: "Oswald", sans-serif; /* fonte do texto */
+  position: absolute; /* flutua por cima da imagem */
+  left: 100px; /* 100px da borda esquerda do banner */
+  bottom: 300px; /* 350px acima da borda inferior do banner */
+  color: white; /* cor branca */
+  font-size: 20px; /* fonte pequena */
+  font-weight: 250; /* letra bem fina */
+  letter-spacing: 4px; /* espaço entre as letras */
+  text-transform: uppercase; /* tudo em maiúsculo */
+}
+
+.texto-banner-novacolecao {
+  font-family: "M PLUS U", sans-serif; /* fonte do texto */
+  color: white; /* cor branca */
+  position: absolute; /* flutua por cima da imagem */
+  left: 100px; /* 100px da borda esquerda */
+  bottom: 245px; /* 245px acima da borda inferior */
+  font-size: 35px; /* fonte média */
+  font-weight: 400; /* espessura normal */
+  letter-spacing: 3px; /* espaço entre letras */
+  text-transform: uppercase; /* tudo maiúsculo */
+}
+
+.texto-banner-peçascriadas {
+  font-family: "M PLUS U", sans-serif; /* fonte do texto */
+  color: white; /* cor branca */
+  position: absolute; /* flutua por cima da imagem */
+  left: 100px; /* 100px da borda esquerda */
+  bottom: 200px; /* 220px acima da borda inferior */
+  font-size: 15px; /* fonte bem pequena */
+  font-weight: 300; /* letra fina */
+  letter-spacing: 2px; /* espaço entre letras */
+  max-width: 300px; /* largura máxima para quebrar linha */
+  text-transform: uppercase; /* tudo maiúsculo */
+}
+
+.botão {
+  font-family: "M PLUS U", sans-serif; /* fonte do botão */
+  position: absolute; /* flutua por cima da imagem */
+  left: 100px; /* 100px da borda esquerda */
+  bottom: 150px; /* 150px acima da borda inferior */
+  cursor: pointer; /* cursor vira mãozinha */
+  font-size: 20px; /* tamanho da fonte */
+  color: white; /* cor branca */
+  background: transparent; /* fundo transparente */
+  border: 1px solid white; /* borda fina branca */
+  letter-spacing: 2px; /* espaço entre letras */
+  padding: 10px 15px; /* 10px cima/baixo, 15px laterais — espaço interno */
+}
+
+.div-pai{
+ top: 20px;/*distancia topo*/
+  left: 50px;/*distancia esquerda*/
+  right: 60px;/*distamcia direita*/
+  display: flex; /* coloca os filhos lado a lado */
+  align-items: center/*alinha verticalmente */
+
+}
+
+
+.div-classeesquerda{
+
+   display: flex;
+  flex-direction: column; /* empilha destaques em cima do mais vendidos */
+  
+}
+
+.texto-destaques {
+  font-family: "Oswald", sans-serif; /* fonte */
+  font-size: 15px; /* tamanho pequeno */
+  letter-spacing: 2px; /* espaço entre letras */
+  color: rgb(85, 82, 82); /* cinza escuro */
+  text-transform: uppercase; /* tudo maiúsculo */
+  font-weight: 400; /* espessura normal */
+  line-height: 1; /* espaço entre linhas mínimo */
+  margin: 30px 0px 2px 105px; /* 10 cima, 0 direita, 4px baixo, 100 esquerda */
+  
+
+}
+
+
+
+.texto-maisvendidos {
+  font-family: "Oswald", sans-serif; /* fonte */
+  font-size: 40px; /* fonte grande — título principal */
+  font-weight: 900; /* negrito máximo */
+  letter-spacing: 2px; /* espaço entre letras */
+  color: black; /* cor preta */
+  text-transform: uppercase; /* tudo maiúsculo */
+  line-height: 1; /* espaço entre linhas mínimo */
+  margin: 0 0 0 100px; /* 0 cima, 0 direita, 0 baixo, 100 esquerda */
+}
+
+.div-classedireita{
+
+  margin-left: auto;  /*distancia esquerda */
+  margin-right: 100px; /*distancia direita */
+
+  
+}
+
+
+
+.texto-vertodos {
+  font-family: "Oswald", sans-serif; /* fonte */
+  font-size: 13px; /* fonte pequena */
+  font-weight: 400; /* espessura normal */
+  color: black; /* cor preta */
+  letter-spacing: 1px; /* espaço entre letras */
+  text-transform: uppercase; /* tudo maiúsculo */
+  cursor: pointer;
+}
+.secaoprodutos{
+padding: 0 100px;
+}
+.div-pai-pecasroupas{
+
+  /* grade de 4 colunas iguais */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas do mesmo tamanho */
+  gap: 20px; /* espaço entre os cards */
+  margin-top: 30px;
+}
+
+
+.imgproduto{
+    width: 50%;
+  aspect-ratio: 3/4; /* proporção retrato, igual da foto, define o formato da caixa*/
+  object-fit: cover; /*A IMG PRENCHE O ESPAÇO MAS PODE CORTAR PARTES DELA, como a img se comporta dentro da caixa*/
+  background-color: #f0f0f0; /* cor enquanto a imagem carrega */
+}
+
+.div-moletompreto{
+
+  position: relative;
+  cursor: pointer;
+}
+.frente-moletom{
+position:absolute;
+top: 0;
+left: 0;
+opacity: 1;
+}
+.verso-moletom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0/*opacity controla a tranparencia de um elemento sendo de 0 a 1,  0 invisivel*/;
+}
+.div-moletompreto:hover .frente-moletom{
+  opacity: 0;
+}
+.div-moletompreto:hover .verso-moletom{
+  opacity: 1;
+}
