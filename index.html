@@ -15,6 +15,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"><!--link fonte-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap" rel="stylesheet"> <!--LINK FONTE-->
+
 <title>Savage</title> <!--titulo que aparece na aba do navegador -->
 </head> <!--todas as config do site fica aqui-->
 
@@ -24,23 +28,23 @@
 <main>
       <h1 class="titulo-savage">SAVAGE</h1>
 </main><!--main é o conteudo principal da pagina, uma tag semantica, ajuda na organização do cod, tudo de relevante da pagina fica dentro dele-->
-      <div class="imagem-banner"><!--div é um container, definimos a largura do site, ou a largura elemento, é nele onde estilizamos onde fica cada elemento-->
+      <div class="divimagem-banner"><!--div é um container, definimos a largura do site, ou a largura elemento, é nele onde estilizamos onde fica cada elemento-->
         <img class="foto-banner" src="fotobanner.jpeg" alt="Modelo usando camisa streetwear listrada em preto e branco, com uma calça preta baggy, da marca Savage">
 
         <!-- ✅ semantica, ajuda a deixar o cod organizado,nav único organiza os dois menus lado a lado é usada para agrupar links de navegação, se for so um link isolado, ele pode ficar sem o nav, o nav é para conjunto de links-->
         <nav class="nav-banner">
           <ul class="ul-menu">
-            <li>Menu</li>
-            <li>Coleções</li>
-            <li>Sobre</li>
+           <a class="links" href="#"><li>Menu</li></a>
+          <a  class="links" href="#"><li>Coleções</li></a>
+           <a class="links" href="#"><li>Sobre</li></a>
           </ul>
           <ul class="ul-menu2">
-            <li>Login</li>
-            <li>Busca</li>
-            <li>
+          <a class="links"href="#"><li>Login</li></a>
+           <a class="links" href="#"> <li>Busca</li></a>
+            <a class="links" href="#"><li>
               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
                 <path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/>
-              </svg>
+              </svg></a>
             </li>
           </ul>
         </nav>
@@ -48,29 +52,44 @@
         <p class="texto-banner-outonoinverno">OUTONO · INVERNO</p>
         <p class="texto-banner-novacolecao">NOVA COLEÇÃO</p>
         <p class="texto-banner-peçascriadas">Peças criadas para quem vive o agora, com visão de futuro.</p>
-        <a href=""><button class="botão">VER COLEÇÃO</button></a>
+        <a href=""><p class="ver-colecao">VER COLEÇÃO</p></a>
 
       </div>
       </section>
 <section class="secaoprodutos"><!--pratica semantica, boas praticas para deixar o cod organizado e distinguir um layolot de outro-->
       <div class="div-pai">
          <div class="div-classeesquerda"> <p class="texto-destaques">DESTAQUES</p>
-          <h2 class="texto-maisvendidos">MAIS VENDIDOS</h2></div>
+          <p class="texto-maisvendidos">MAIS VENDIDOS</p></div>
           <div class="div-classedireita"><p class="texto-vertodos">VER TODOS</p></div>
         </div>
     
 <!--pratica semantica, boas praticas para deixar o cod organizado e distinguir um layolot de outro-->
         <div class="div-pai-pecasroupas">
-          <div class="div-moletompreto"> <img class="frente-moletom imgproduto" src="moletompretofrente1.jpeg" alt="Moletom Preto, modelagem confortável, bolso canguru fronta e com a estampa Savage">
-            <img class="verso-moletom imgproduto" src="moletompretoverso.jpeg" alt="Moletom Preto, modelagem confortável, bolso canguru fronta e com a estampa Savage"></div>
-           <div> <img  class="imgproduto" src="sueterlistradofrente.jpeg" alt="Polo Rugby Listrada preta e branca, mangas longas, gola polo e listras horizontais largas em estilo retrô">
-            <img  class="imgproduto" src="sueterlistradoverso.jpeg" alt="Polo Rugby Listrada preta e branca, mangas longas, gola polo e listras horizontais largas em estilo retrô"><</div>
-          <div> <img  class="imgproduto" src="camisapretafrente1.jpeg" alt="Camiseta Preta básica, manga curta com a estampa Savage">
-            <img  class="imgproduto" src="camisapretaverso.jpeg" alt="Camiseta Preta básica, manga curta com a estampa Savage"></div>
-           <div> <img  class="imgproduto" src="bonesavagefrente.jpeg" alt="Boné Preto dad cap, aba curva, ajuste traseiro e logo bordado na parte frontal">
-            <img  class="imgproduto" src="bonesavageverso.jpeg" alt="Boné Preto dad cap, aba curva, ajuste traseiro e logo bordado na parte frontal"></div>
+          <div class="div-moletompreto"> <img class="frente-moletom imgproduto" src="moletompretofrente1.jpeg" alt="Moletom , modelagem confortável, bolso canguru fronta e com a estampa Savage">
+          <p class="precomoletom"> MOLETOM SAVAGE 
+            R$249,90
+          </p></div>
+            <div class="div-sueterlistrado"> <img   class="frente-sueterlistrado imgproduto" src="sueterlistradofrente.jpeg" alt="Polo Listrada preta e branca, mangas longas, gola polo e listras horizontais largas em estilo retrô">
+            <p class="precopolosueter">POLO LISTRADA SAVAGE
+              R$189,90
+            </p></div>
+          <div class="div-camisapreta"> <img  class="frente-camisa imgproduto" src="camisapretafrente (2).jpeg" alt="Camiseta básica, manga curta com a estampa Savage">
+          <p class="precocamisa">CAMISETA SAVAGE
+            R$129,90
+          </p></div>
+           <div class="div-bone"> <img  class=" bone imgproduto" src="bonesavagefrente.jpeg" alt="Boné Preto dad cap, aba curva, ajuste traseiro e logo bordado na parte frontal">
+          <p  class="precobone"> BONÉ SAVAGE 
+            R$89,90
+          </p></div>
         </div>
     </section>
+    <sectionS> <div class="div-banner2"><img class="imgbanner2"   src="banner2.jpeg">
+    <p class="textobanner2naoseguimos">NÃO SEGUIMOS TENDÊNCIAS.</p>
+    <p class="textobanner2criamos">CRIAMOS PRESENÇA.</p>
+   <a href=""><p class="textobanner2sobre">SOBRE A MARCA</p></a>
+    </div>
+    
+    </section></div>
   </div>
 </body>
 <script src = "loja.js"> </script> <!--para chamar o script-->

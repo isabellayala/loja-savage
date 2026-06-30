@@ -6,7 +6,7 @@
 }
 
 .titulo-savage {
-  font-family: "Megrim", system-ui; /* fonte principal, system-ui é o plano B */
+    font-family: "Audiowide", sans-serif;
   font-weight: 600; /* espessura da letra — 600 é semi-negrito */
   font-style: normal; /* estilo normal, sem itálico */
   font-size: clamp(2rem, 5vw, 6rem); /* mínimo 2rem, cresce com a tela, máximo 6rem */
@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: whitesmoke; /* cor de fundo da página inteira */
+  background-color: white; /* cor de fundo da página inteira */
 }
 
 .foto-banner {
@@ -26,15 +26,16 @@ body {
   object-position: center 30%; /* foca na parte de cima da imagem */
 }
 
-.imagem-banner {
+.divimagem-banner {
   width: 93%; /* largura — não ocupa 100% para dar respiro nas laterais */
   height: 700px; /* altura fixa do banner */
   overflow: hidden; /* esconde o que a imagem tiver além da área */
   margin: 0 auto; /* centraliza o banner na página */
   position: relative; /* permite posicionar elementos filhos por cima */
   border-radius: 9px; /* arredonda os cantos do banner */
+  
 }
-/* nav organiza os dois menus lado a lado */
+/* nav tag de navegação que possui mais de um link, organiza os dois menus lado a lado */
 .nav-banner {
   position: absolute; /*elemento flutua por cima de oputros*/
   top: 20px;/*distancia topo*/
@@ -44,6 +45,12 @@ body {
   justify-content: space-between;/* um em cada lado */
   align-items: center/*alinha verticalmente */
 
+}
+/*LINS DOS MENUS*/
+.links{
+  color: white;
+  text-decoration:none; /*para tirar a aparencia dos links*/
+   font-family: "M PLUS U", sans-serif; /* fonte  */
 }
 
 .ul-menu {
@@ -103,11 +110,11 @@ body {
   text-transform: uppercase; /* tudo maiúsculo */
 }
 
-.botão {
+.ver-colecao {
   font-family: "M PLUS U", sans-serif; /* fonte do botão */
   position: absolute; /* flutua por cima da imagem */
   left: 100px; /* 100px da borda esquerda */
-  bottom: 150px; /* 150px acima da borda inferior */
+  bottom: 130px; /* 150px acima da borda inferior */
   cursor: pointer; /* cursor vira mãozinha */
   font-size: 20px; /* tamanho da fonte */
   color: white; /* cor branca */
@@ -118,7 +125,7 @@ body {
 }
 
 .div-pai{
- top: 20px;/*distancia topo*/
+ top: 20px;/*distancia topo*/ 
   left: 50px;/*distancia esquerda*/
   right: 60px;/*distamcia direita*/
   display: flex; /* coloca os filhos lado a lado */
@@ -179,46 +186,119 @@ body {
   text-transform: uppercase; /* tudo maiúsculo */
   cursor: pointer;
 }
-.secaoprodutos{
-padding: 0 100px;
-}
+
+
 .div-pai-pecasroupas{
 
   /* grade de 4 colunas iguais */
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colunas do mesmo tamanho */
   gap: 20px; /* espaço entre os cards */
-  margin-top: 30px;
+  
 }
-
 
 .imgproduto{
-    width: 50%;
+    width: 100%;
   aspect-ratio: 3/4; /* proporção retrato, igual da foto, define o formato da caixa*/
   object-fit: cover; /*A IMG PRENCHE O ESPAÇO MAS PODE CORTAR PARTES DELA, como a img se comporta dentro da caixa*/
-  background-color: #f0f0f0; /* cor enquanto a imagem carrega */
+  background-color: gray; /* cor enquanto a imagem carrega */
+    aspect-ratio: 3/4;  /* proporção retrato — perfeito para moda */
+    border-radius: 4%;
+
+ 
 }
 
-.div-moletompreto{
-
+.div-sueterlistrado, 
+.div-moletompreto, 
+.div-camisapreta, 
+.div-bone {
   position: relative;
   cursor: pointer;
+  max-width: 100%; /* O container ocupa toda a largura da coluna do Grid */
+top: 20px;
 }
-.frente-moletom{
-position:absolute;
-top: 0;
-left: 0;
-opacity: 1;
+.precomoletom{
+  font-family:  "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 200px;
+  font-size: 20px;
+
 }
-.verso-moletom{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0/*opacity controla a tranparencia de um elemento sendo de 0 a 1,  0 invisivel*/;
+.precopolosueter{
+  font-family:  "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 200px;
+  font-size: 20px;
 }
-.div-moletompreto:hover .frente-moletom{
-  opacity: 0;
+.precocamisa{
+  font-family:  "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 200px;
+  font-size: 20px;
 }
-.div-moletompreto:hover .verso-moletom{
-  opacity: 1;
+.precobone{
+   font-family:  "Oswald", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 200px;
+  font-size: 20px;
+
+}
+.imgbanner2{
+  display: block; /* transforma img de inline para bloco, aceita width/height */
+  width: 100%; /* ocupa toda a largura do container pai */
+  height: 100%; /* ocupa toda a altura do container pai */
+  object-fit: cover; /* preenche o espaço cortando o que sobrar */
+  object-position: center 30%; /* foca na parte de cima da imagem */
+    aspect-ratio: 3/4; /* mesma proporção para todos */
+  object-fit: cover;/* imagem nunca distorce, mas pode ser cortada nas bordas */
+}
+.div-banner2{
+ width: 93%; /* largura — não ocupa 100% para dar respiro nas laterais */
+  height: 300px; /* altura fixa do banner */
+  overflow: hidden; /* esconde o que a imagem tiver além da área */
+  margin: 90px auto; /* centraliza o banner na página */
+  position: relative; /* permite posicionar elementos filhos por cima */
+  border-radius: 9px; /* arredonda os cantos do banner */
+  
+  
+}
+.textobanner2naoseguimos{
+   position: absolute; /* flutua por cima da imagem */
+  right: 200px; /* 100px da borda direita do banner */
+  top: 40px; /* 30px acima da borda superior do banner */
+  color: white; /* cor branca */
+  font-size: 15px; /* fonte pequena */
+  font-weight: 400; /* letra bem*/
+  letter-spacing: 4px; /* espaço entre as letras */
+  text-transform: uppercase; /* tudo em maiúsculo */
+  font-family: "M PLUS U", sans-serif; /* fonte do texto */
+}
+.textobanner2criamos{
+position: absolute; 
+right: 500px;
+top: 50px;
+color: white;
+font-size: 30px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-family:"M PLUS U", sans-serif; /* fonte do texto */ 
+max-width: 30px;/* largura máxima para quebrar linha */
+}
+.textobanner2sobre{
+   font-family: "M PLUS U", sans-serif; /* fonte do botão */
+  position: absolute; /* flutua por cima da imagem */
+  right: 300px; /* 100px da borda direita */
+  bottom: 40px; /* 150px acima da borda inferior */
+  cursor: pointer; /* cursor vira mãozinha */
+  font-size: 20px; /* tamanho da fonte */
+  color: white; /* cor branca */
+  background: transparent; /* fundo transparente */
+  border: 1px solid white; /* borda fina branca */
+  letter-spacing: 2px; /* espaço entre letras */
+  padding: 10px 15px; /* 10px cima/baixo, 15px laterais — espaço interno */
 }
