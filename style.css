@@ -7,7 +7,7 @@
 
 
 .container-principal {
-    max-width: 1600px; /* largura máxima */
+    min-width: 100%; /* largura máxima */
     width: 100%;
     margin: 0 auto;
     padding: 0 15px; /* menos padding no celular */
@@ -18,37 +18,18 @@
     font-weight: 600;
     font-style: normal;
     font-size: clamp(2rem, 5vw, 6rem); 
-    text-align: center;
-    margin-top: 20px; /* menos espaço no celular */
+    text-align: center ;
+    margin-top: 5px; /* menos espaço no celular */
 }
 
 
 body {
     background-color: white;
 }
-
-
-.divimagem-banner {
-    width: 100%; /* ocupa tudo no celular */
-    height: 500px; /* menor no celular */
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    border-radius: 0; /* sem arredondamento no celular */
-}
-
-.foto-banner {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-}
-
 /* ============================================
    MENU — CELULAR
    ============================================ */
-.nav-banner {
+.nav-header {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -63,35 +44,57 @@ body {
     display: none; /* esconde no celular */
     gap: 30px;
     list-style-type: none;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
 .ul-menu2 {
     font-family: "M PLUS U", sans-serif;
-    display: flex;
     gap: 15px; /* menos espaço no celular */
-    color: white;
+    color: black;
     list-style-type: none;
     cursor: pointer;
+    display: none;
 }
+
 
 .links {
-    color: white;
-    text-decoration: none;
+    color: black;
     font-family: "M PLUS U", sans-serif;
+    text-decoration: none;
+}
+.menu-celular{
+    display: flex;
+    color: black;
+
 }
 
-/* ============================================
-   TEXTOS DO BANNER — CELULAR
-   ============================================ */
+.divimagem-banner {
+    width: 100%; /* ocupa tudo no celular */
+    height: 200px; /* corta a img ,quer mostrar mais aumenta, quer cortar mais diminui*/
+    overflow: hidden; /*garante o corte*/
+    margin: 0 auto;
+    position: relative;
+    border-radius: 3%; /* sem arredondamento no celular */
+}
+
+.foto-banner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%; /*quer descer a foto aumenta, quer subir a foto diminui %*/
+}
+
+
+
 .texto-banner-outonoinverno {
     font-family: "Oswald", sans-serif;
     position: absolute;
     left: 20px; /* menos distância no celular */
-    bottom: 250px;
+    bottom: 140px;
     color: white;
-    font-size: 12px; /* menor no celular */
+    font-size: 10px; /* menor no celular */
     font-weight: 250;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -102,8 +105,8 @@ body {
     color: white;
     position: absolute;
     left: 20px;
-    bottom: 200px;
-    font-size: 22px; /* menor no celular */
+    bottom: 120px;
+    font-size: 15px; /* menor no celular */
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -114,7 +117,7 @@ body {
     color: white;
     position: absolute;
     left: 20px;
-    bottom: 160px;
+    bottom: 70px;
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -126,7 +129,7 @@ body {
     font-family: "M PLUS U", sans-serif;
     position: absolute;
     left: 20px;
-    bottom: 80px;
+    bottom: 30px;
     cursor: pointer;
     font-size: 12px; /* menor no celular */
     color: white;
@@ -187,9 +190,7 @@ body {
     cursor: pointer;
 }
 
-/* ============================================
-   GRADE DE PRODUTOS — CELULAR
-   ============================================ */
+
 .div-pai-pecasroupas {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
@@ -225,9 +226,7 @@ body {
     font-size: 14px; /* menor no celular */
 }
 
-/* ============================================
-   BANNER 2 — CELULAR
-   ============================================ */
+
 .div-banner2 {
     width: 100%;
     height: 200px; /* menor no celular */
@@ -242,7 +241,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: 20% center;
 }
 
 .textobanner2naoseguimos {
@@ -260,7 +259,7 @@ body {
 .textobanner2criamos {
     font-family: "M PLUS U", sans-serif;
     position: absolute;
-    right: 20px;
+    right: 75px;
     top: 40px;
     color: white;
     font-size: 18px;
@@ -273,8 +272,8 @@ body {
 .textobanner2sobre {
     font-family: "M PLUS U", sans-serif;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 70px;
+    bottom: 60px;
     cursor: pointer;
     font-size: 12px;
     color: white;
@@ -285,18 +284,25 @@ body {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 764px) {
 
     .divimagem-banner {
-        width: 95%;
-        height: 600px;
+        width: 100%;
+        height: 300px;
         border-radius: 9px;
     }
 
-    .ul-menu {
-        display: flex; /* aparece no tablet */
-    }
+    .ul-menu,
+    .ul-menu2 {
+        display: none; /* esconde em linha*/
 
+}
+.foto-banner{
+    display:block;
+    width: 100%;
+    height: 300px;
+    object-position: center 30%;
+}
     .texto-banner-outonoinverno {
         left: 60px;
         bottom: 280px;
@@ -355,38 +361,53 @@ body {
     .precobone {
         font-size: 16px;
     }
-}
 
+}
 
 @media (min-width: 1024px) {
 
     .container-principal {
         padding: 0 30px;
+        max-width: 1440px;
     }
+  
 
     .titulo-savage {
         margin-top: 40px;
     }
-
+.menu-celular{
+    display: none;
+}
     .divimagem-banner {
-        width: 93%;
+        width: 100%;
         height: 700px; /* altura original */
+        
     }
+    .foto-banner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30% ; /*quer descer a foto aumenta, quer subir a foto diminui %*/
 
-    .nav-banner {
+}
+
+    .nav-header {
         top: 20px;
         left: 50px;
         right: 60px;
     }
-
-    .ul-menu {
+.menu-celular{
+    display: none;
+}
+    .ul-menu,
+    .ul-menu2 {
         display: flex;
         gap: 30px;
     }
 
-    .ul-menu2 {
-        gap: 30px;
-    }
+    
+  
 
     .texto-banner-outonoinverno {
         left: 100px;
