@@ -1,100 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head><!--SEMANTICA, é a config do site-->
-    <meta charset="UTF-8"> <!--tipo de alfabeto-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--meta representa o metadados de uma empresa-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="iconeabapesquisa.jpeg"> <!--sempre acrescentar essa tag link relacionada a icon para a logo aparecer na aba de pesquisa-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--importar a fonte no google fonte-->
+    <link rel="icon" href="iconeabapesquisa.jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&display=swap" rel="stylesheet"><!--fonte descrição banner--> /> <!--link icon-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"><!--link fonte-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-<title>Savage</title> <!--titulo que aparece na aba do navegador -->
-</head> <!--todas as config do site fica aqui-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Savage</title>
+</head>
 
 <body>
-  <div class="container-principal">
-<header>
-      <h1 class="titulo-savage">SAVAGE</h1>
-      
-      <nav class="nav-header">
-        
-<span class="material-symbols-outlined menu-celular">menu</span>
-          <ul class="ul-menu">
-          <li> <a class="links" href="#">Início</a></li>
-          <li><a  class="links" href="#">Coleções</a></li>
-          <li> <a class="links" href="#">Sobre</a></li>
-          </ul>
-          <ul class="ul-menu2">
-         <li> <a class="links" href="#" ><span class="material-symbols-outlined">search</span></a></li>
-         <li> <a class="links" href="#" ><span class="material-symbols-outlined">person</span></a></li>
-        <li> <a class="links" href="#" ><span class="material-symbols-outlined">shopping_cart</span></a></li>
-  
-          </ul>
-        </nav>
-</header><!--main é o conteudo principal da pagina, uma tag semantica, ajuda na organização do cod, tudo de relevante da pagina fica dentro dele-->
-      <div class="divimagem-banner"><!--div é um container, definimos a largura do site, ou a largura elemento, é nele onde estilizamos onde fica cada elemento-->
-        <img class="foto-banner" src="fotobanner.jpeg" alt="Modelo usando camisa streetwear listrada em preto e branco, com uma calça preta baggy, da marca Savage">
 
-        <!-- ✅ semantica, ajuda a deixar o cod organizado,nav único organiza os dois menus lado a lado é usada para agrupar links de navegação, se for so um link isolado, ele pode ficar sem o nav, o nav é para conjunto de links-->
-       <main>
-        <section>
-<!--input, tag para criar campos interativos, permite que o usuario  insira tipos de dados-->
-        <p class="texto-banner-outonoinverno">OUTONO · INVERNO</p>
-        <p class="texto-banner-novacolecao">NOVA COLEÇÃO</p>
-        <p class="texto-banner-peçascriadas">Peças criadas para quem vive o agora, com visão de futuro.</p>
-        <a href=""><p class="ver-colecao">VER COLEÇÃO</p></a>
+  <!-- HEADER FIXO — fica no topo sempre -->
+  <header class="header">
+    <button class="material-symbols-outlined menu-celular">menu</button>
+    <h1 class="titulo-savage">SAVAGE</h1>
+    <nav class="nav-header">
+      <ul class="ul-menu">
+        <li><a class="links" href="#">Início</a></li>
+        <li><a class="links" href="#">Coleções</a></li>
+        <li><a class="links" href="#">Sobre</a></li>
+      </ul>
+      <ul class="ul-menu2">
+        <li><a class="links" href="#"><span class="material-symbols-outlined">search</span></a></li>
+        <li><a class="links" href="#"><span class="material-symbols-outlined">person</span></a></li>
+        <li><a class="links" href="#"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
-      </div>
-      </section>
-      
-<section class="secaoprodutos"><!--pratica semantica, boas praticas para deixar o cod organizado e distinguir um layolot de outro-->
-      <div class="div-pai">
-         <div class="div-classeesquerda"> <p class="texto-destaques">DESTAQUES</p>
-          <p class="texto-maisvendidos">MAIS VENDIDOS</p></div>
-          <div class="div-classedireita"><p class="texto-vertodos">VER TODOS</p></div>
-        </div>
-    
-<!--pratica semantica, boas praticas para deixar o cod organizado e distinguir um layolot de outro-->
-        <div class="div-pai-pecasroupas">
-          <div class="div-moletompreto"> <img class="frente-moletom imgproduto" src="moletompretofrente1.jpeg" alt="Moletom , modelagem confortável, bolso canguru fronta e com a estampa Savage">
-          <p class="precomoletom"> MOLETOM SAVAGE 
-            R$249,90
-          </p></div>
-            <div class="div-sueterlistrado"> <img   class="frente-sueterlistrado imgproduto" src="sueterlistradofrente.jpeg" alt="Polo Listrada preta e branca, mangas longas, gola polo e listras horizontais largas em estilo retrô">
-            <p class="precopolosueter">POLO LISTRADA SAVAGE
-              R$189,90
-            </p></div>
-          <div class="div-camisapreta"> <img  class="frente-camisa imgproduto" src="camisapretafrente (2).jpeg" alt="Camiseta básica, manga curta com a estampa Savage">
-          <p class="precocamisa">CAMISETA SAVAGE
-            R$129,90
-          </p></div>
-           <div class="div-bone"> <img  class=" bone imgproduto" src="bonesavagefrente.jpeg" alt="Boné Preto dad cap, aba curva, ajuste traseiro e logo bordado na parte frontal">
-          <p  class="precobone"> BONÉ SAVAGE 
-            R$89,90
-          </p></div>
-        </div>
-    </section>
-    <section> <div class="div-banner2"><img class="imgbanner2"   src="banner2.jpeg">
-    <p class="textobanner2naoseguimos">NÃO SEGUIMOS TENDÊNCIAS.</p>
-    <p class="textobanner2criamos">CRIAMOS PRESENÇA.</p>
-   <a href=""><p class="textobanner2sobre">SOBRE A MARCA</p></a>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container-principal">
+
+    <!-- BANNER -->
+    <div class="divimagem-banner">
+      <img class="foto-banner" src="fotobanner.jpeg" alt="Modelo usando camisa streetwear listrada em preto e branco">
+      <p class="texto-banner-outonoinverno">OUTONO · INVERNO</p>
+      <p class="texto-banner-novacolecao">NOVA COLEÇÃO</p>
+      <p class="texto-banner-peçascriadas">Peças criadas para quem vive o agora, com visão de futuro.</p>
+      <a href=""><p class="ver-colecao">VER COLEÇÃO</p></a>
     </div>
-    </section></div>
-    
+
+    <!-- DESTAQUES -->
+    <section class="secaoprodutos">
+      <div class="div-pai-destaques">
+        <div class="div-classeesquerda">
+          <p class="texto-destaques">DESTAQUES</p>
+          <p class="texto-maisvendidos">MAIS VENDIDOS</p>
+        </div>
+        <div class="div-classedireita">
+          <p class="texto-vertodos">VER TODOS</p>
+        </div>
+      </div>
+
+      <div class="div-pai-pecasroupas">
+        <div class="div-moletompreto">
+          <img class="frente-moletom imgproduto" src="moletompretofrente1.jpeg" alt="Moletom Savage">
+          <p class="precomoletom">MOLETOM SAVAGE<br>R$249,90</p>
+        </div>
+        <div class="div-sueterlistrado">
+          <img class="frente-sueterlistrado imgproduto" src="sueterlistradofrente.jpeg" alt="Polo Listrada Savage">
+          <p class="precopolosueter">POLO LISTRADA SAVAGE<br>R$189,90</p>
+        </div>
+        <div class="div-camisapreta">
+          <img class="frente-camisa imgproduto" src="camisapretafrente (2).jpeg" alt="Camiseta Savage">
+          <p class="precocamisa">CAMISETA SAVAGE<br>R$129,90</p>
+        </div>
+        <div class="div-bone">
+          <img class="bone imgproduto" src="bonesavagefrente.jpeg" alt="Boné preto Savage">
+          <p class="precobone">BONÉ SAVAGE<br>R$89,90</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER 2 -->
+    <section>
+      <div class="div-banner2">
+        <img class="imgbanner2" src="banner2.jpeg" alt="Banner Savage">
+        <p class="textobanner2naoseguimos">NÃO SEGUIMOS TENDÊNCIAS.</p>
+        <p class="textobanner2criamos">CRIAMOS PRESENÇA.</p>
+        <a href=""><p class="textobanner2sobre">SOBRE A MARCA</p></a>
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section>
+ <div class="div-pai-categorias">
+      <div class="divcategoriasesquerda"><p class="textocategorias">CATEGORIAS</p>
+      <p class="textoexplorar">EXPLORAR</p></div>
+<div class="divvertodos2direita"><p class="textovertodos2"><a>VER TODOS</a></p></div></div>
+     
+     <div class="div-pai-categorias">
+       <div><img src="modelomoletompretofrente1.jpeg" alt="Modelo usando moletom preto com a logo SAVAGE" class="imgmoletompretofrente">
+        <p class="textofem">FEMININO</p>
+      </div>
+      <div><img src="modelomoletomcinzafrente.jpeg" alt="Modelo usando moletom cinza da SAVAGE " class="imgmodelomoletomcinza">
+      <p class="textomasc">MASCULINO</p></div>
+<div>
+  <img src="bonefrentefundocinza.png" alt="boné preto com a logo da SAVAGE" class="imgbonefrente">
+  <p class="textoacessorios">ACESSÓRIOS</p>
+</div>
+
+</div>
+    </section>
+    <footer class="footer">
+  <div class="footer-logo">
+    <h2>SAVAGE</h2>
+    <p>Streetwear premium.</p>
   </div>
- </main>
- <script src = "loja.js"> </script> <!--para chamar o script-->
+
+  <div class="footer-links">
+    <h3>Navegação</h3>
+    <a href="#">Início</a>
+    <a href="#">Coleções</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </div>
+
+  <div class="footer-social">
+    <h3>Redes</h3>
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">Pinterest</a>
+  </div>
+
+  <div class="footer-copy">
+    <p>© 2026 SAVAGE. Não seguimos tendências, criamos presença..</p>
+  </div>
+</footer>
+
+  </main>
+
+  <script src="loja.js"></script>
 </body>
-</html> <!--tag raiz, base-->
+</html>
+

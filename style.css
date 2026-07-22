@@ -1,81 +1,97 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: white;
+}
 
-.container-principal {
-    min-width: 100%; /* largura máxima */
+/* ============================================
+   HEADER — CELULAR BASE
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 15px; /* menos padding no celular */
+    z-index: 999;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .titulo-savage {
     font-family: "Audiowide", sans-serif;
     font-weight: 600;
-    font-style: normal;
-    font-size: clamp(2rem, 5vw, 6rem); 
-    text-align: center ;
-    margin-top: 5px; /* menos espaço no celular */
+    font-size: clamp(1rem, 4vw, 2rem);
+    margin: 0;
+    text-align: center;
+    flex: 1; /* ocupa o espaço do meio */
 }
 
-
-body {
-    background-color: white;
+/* hamburguer — aparece no celular */
+.menu-celular {
+    display: block;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
 }
-/* ============================================
-   MENU — CELULAR
-   ============================================ */
+
+/* nav — some no celular */
 .nav-header {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
 }
 
 .ul-menu {
     font-family: "M PLUS U", sans-serif;
-    display: none; /* esconde no celular */
+    display: flex;
     gap: 30px;
     list-style-type: none;
-    color: black;
     cursor: pointer;
 }
 
 .ul-menu2 {
     font-family: "M PLUS U", sans-serif;
-    gap: 15px; /* menos espaço no celular */
-    color: black;
+    display: flex;
+    gap: 20px;
     list-style-type: none;
     cursor: pointer;
-    display: none;
 }
-
 
 .links {
     color: black;
     font-family: "M PLUS U", sans-serif;
     text-decoration: none;
 }
-.menu-celular{
-    display: flex;
-    color: black;
 
+/* ============================================
+   CONTAINER PRINCIPAL
+   ============================================ */
+.container-principal {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 60px; /* empurra abaixo do header */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
+/* ============================================
+   BANNER — CELULAR
+   ============================================ */
 .divimagem-banner {
-    width: 100%; /* ocupa tudo no celular */
-    height: 200px; /* corta a img ,quer mostrar mais aumenta, quer cortar mais diminui*/
-    overflow: hidden; /*garante o corte*/
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
     margin: 0 auto;
     position: relative;
-    border-radius: 3%; /* sem arredondamento no celular */
+    border-radius: 3%;
 }
 
 .foto-banner {
@@ -83,18 +99,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%; /*quer descer a foto aumenta, quer subir a foto diminui %*/
+    object-position: center 30%;
 }
-
-
 
 .texto-banner-outonoinverno {
     font-family: "Oswald", sans-serif;
     position: absolute;
-    left: 20px; /* menos distância no celular */
+    left: 20px;
     bottom: 140px;
     color: white;
-    font-size: 10px; /* menor no celular */
+    font-size: 10px;
     font-weight: 250;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -106,7 +120,7 @@ body {
     position: absolute;
     left: 20px;
     bottom: 120px;
-    font-size: 15px; /* menor no celular */
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -121,7 +135,7 @@ body {
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 1px;
-    max-width: 200px; /* menor no celular */
+    max-width: 200px;
     text-transform: uppercase;
 }
 
@@ -131,7 +145,7 @@ body {
     left: 20px;
     bottom: 30px;
     cursor: pointer;
-    font-size: 12px; /* menor no celular */
+    font-size: 12px;
     color: white;
     background: transparent;
     border: 1px solid white;
@@ -140,16 +154,15 @@ body {
 }
 
 /* ============================================
-   SEÇÃO DESTAQUES — CELULAR
+   DESTAQUES — CELULAR
    ============================================ */
-.div-pai {
+.div-pai-destaques{
     display: flex;
     align-items: center;
-    padding: 20px 15px; /* menos padding no celular */
+    padding: 20px 15px;
 }
 
 .div-classeesquerda {
-    display: flex;
     flex-direction: column;
 }
 
@@ -159,14 +172,14 @@ body {
     letter-spacing: 2px;
     color: rgb(85, 82, 82);
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 450;
     line-height: 1;
-    margin: 20px 0 2px 15px; /* menos margem no celular */
+    margin: 20px 0 2px 15px;
 }
 
 .texto-maisvendidos {
     font-family: "Oswald", sans-serif;
-    font-size: 24px; /* menor no celular */
+    font-size: 24px;
     font-weight: 900;
     letter-spacing: 2px;
     color: black;
@@ -177,23 +190,25 @@ body {
 
 .div-classedireita {
     margin-left: auto;
-    margin-right: 15px; /* menos margem no celular */
+    margin-right: 15px;
 }
 
 .texto-vertodos {
     font-family: "Oswald", sans-serif;
     font-size: 11px;
-    font-weight: 400;
+    font-weight: 450;
     color: black;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-
+/* ============================================
+   PRODUTOS — CELULAR
+   ============================================ */
 .div-pai-pecasroupas {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0 15px;
 }
@@ -223,17 +238,19 @@ body {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 14px; /* menor no celular */
+    font-size: 14px;
 }
 
-
+/* ============================================
+   BANNER 2 — CELULAR
+   ============================================ */
 .div-banner2 {
     width: 100%;
-    height: 200px; /* menor no celular */
+    height: 200px;
     overflow: hidden;
-    margin: 40px auto;
+    margin: 15px auto;
     position: relative;
-    border-radius: 0;
+    border-radius: 3%;
 }
 
 .imgbanner2 {
@@ -282,9 +299,98 @@ body {
     letter-spacing: 2px;
     padding: 8px 12px;
 }
+.div-pai-categorias{
+     display: flex; /*"Transforme esta div em um container flexível para que eu possa controlar seus filhos."*/
+justify-content: center; /*centralize os filhos no eixo principal, cima, baixo*/
+   padding: 20px 15px;
+
+}
+.divcategoriasesquerda{
+ margin: 15px 10px 0 ;
+}
+
+.textocategorias{
+ font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(85, 82, 82);
+    text-transform: uppercase;
+    font-weight: 450;
+    line-height: 1;
+    display: flex;
+   
+
+}
+.textoexplorar{
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: rgb(85, 82, 82);
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+  
+}
+.divvertodos2direita{
+   
+ margin: 15px 0 0 200px;
+}
+.textovertodos2{
+     font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 450;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+   display: flex;
+   cursor: pointer;
+   white-space: nowrap;/*nnc quebre esse texto, usar apenas ond efaz swentido*/
+
+}
 
 
-@media (min-width: 764px) {
+.div-pai-categorias{
+    display: grid;
+    align-items:center;
+    padding: 20px 0 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: relative;
+   }
+
+   .imgmoletompretofrente,
+   .imgmodelomoletomcinza,
+   .imgbonefrente
+   {
+    width: 100%;
+    aspect-ratio: 1/1; /*define a proporçao do container*/
+    object-fit: cover; /* preenche tudo, corta o que sobrar */
+    background-color: gray;
+    border-radius: 4%;
+     position: relative;
+    object-position: center 20%;
+
+   }
+   .textofem,
+   .textomasc,
+   .textoacessorios{
+    font-family: "M PLUS U", sans-serif;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+font-weight: 600;
+bottom: 10px;
+
+   }
+ 
+/* ============================================
+   TABLET — 768px
+   ============================================ */
+@media (min-width: 768px) {
 
     .divimagem-banner {
         width: 100%;
@@ -292,39 +398,33 @@ body {
         border-radius: 9px;
     }
 
-    .ul-menu,
-    .ul-menu2 {
-        display: none; /* esconde em linha*/
+    .foto-banner {
+        height: 300px;
+        object-position: center 30%;
+    }
 
-}
-.foto-banner{
-    display:block;
-    width: 100%;
-    height: 300px;
-    object-position: center 30%;
-}
     .texto-banner-outonoinverno {
         left: 60px;
-        bottom: 280px;
+        bottom: 210px;
         font-size: 15px;
     }
 
     .texto-banner-novacolecao {
         left: 60px;
-        bottom: 230px;
+        bottom: 180px;
         font-size: 28px;
     }
 
     .texto-banner-peçascriadas {
         left: 60px;
-        bottom: 185px;
+        bottom: 145px;
         font-size: 12px;
         max-width: 260px;
     }
 
     .ver-colecao {
         left: 60px;
-        bottom: 110px;
+        bottom: 90px;
         font-size: 15px;
     }
 
@@ -343,7 +443,7 @@ body {
     }
 
     .div-pai-pecasroupas {
-        grid-template-columns: repeat(2, 1fr); /* ainda 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding: 0 40px;
     }
@@ -361,53 +461,65 @@ body {
     .precobone {
         font-size: 16px;
     }
-
 }
 
+/* ============================================
+   DESKTOP — 1024px
+   ============================================ */
 @media (min-width: 1024px) {
 
-    .container-principal {
-        padding: 0 30px;
-        max-width: 1440px;
+    /* header no desktop — menu aparece, hamburguer some */
+    .header {
+        padding: 15px 50px;
     }
-  
 
     .titulo-savage {
-        margin-top: 40px;
+        font-size: 1.8rem;
+        text-align: left;
+        flex: 0; /* não ocupa mais o espaço do meio */
     }
-.menu-celular{
-    display: none;
-}
-    .divimagem-banner {
-        width: 100%;
-        height: 700px; /* altura original */
-        
+
+    /* hamburguer some */
+    .menu-celular {
+        display: none !important;
     }
-    .foto-banner {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30% ; /*quer descer a foto aumenta, quer subir a foto diminui %*/
 
-}
-
+    /* nav aparece */
     .nav-header {
-        top: 20px;
-        left: 50px;
-        right: 60px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
     }
-.menu-celular{
-    display: none;
-}
-    .ul-menu,
-    .ul-menu2 {
+
+    .ul-menu {
         display: flex;
         gap: 30px;
+        list-style-type: none;
     }
 
-    
-  
+    .ul-menu2 {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+    }
+
+    .container-principal {
+        padding-top: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .divimagem-banner {
+        width: 90%;
+        height: 700px;
+    }
+
+    .foto-banner {
+        height: 100%;
+        object-position: center 30%;
+    }
 
     .texto-banner-outonoinverno {
         left: 100px;
@@ -448,12 +560,16 @@ body {
         margin: 0 0 0 100px;
     }
 
+    .texto-vertodos {
+        font-size: 14px;
+    }
+
     .div-classedireita {
         margin-right: 100px;
     }
 
     .div-pai-pecasroupas {
-        grid-template-columns: repeat(4, 1fr); /* 4 colunas no desktop */
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 0;
     }
